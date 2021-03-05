@@ -1,0 +1,74 @@
+/* roots and customs */
+:root {
+  --clr-primary: ;
+  --clr-midtone: ;
+  --clr-darktone: ;
+  --clr-contrast1: ;
+  --clr-contrast2: ;
+  --ff-buttons: "Righteous", monospace;
+  --ff-display: "Roboto Mono", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(./images/school-hall.jpg);
+  background-size: cover;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc-container {
+  width: 400px;
+  margin-top: 40px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 2px;
+  box-shadow: 5px -5px 30px green;
+}
+
+button {
+  color: rgb(59, 54, 78);
+  font-family: var(--ff-display);
+  font-weight: 900;
+  font-size: 2rem;
+  background: linear-gradient(
+    to right top,
+    rgb(173, 248, 229),
+    rgb(131, 235, 209)
+  );
+  height: 100px;
+  outline: none;
+  border: none;
+}
+
+.display {
+  height: 110px;
+  color: rgb(192, 192, 192);
+  background: rgb(44, 44, 44);
+  padding: 10px;
+  font-size: 2rem;
+  font-family: var(--ff-display);
+  text-align: right;
+  background-color: black;
+  grid-column: 1 / span 4;
+}
+.current-display {
+  color: white;
+  font-size: 2.5rem;
+}
+.allClear {
+  grid-column: 1 / span 2;
+}
+.equal {
+  grid-column: 3 / span 2;
+}
