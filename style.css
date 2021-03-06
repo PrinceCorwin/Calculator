@@ -64,27 +64,38 @@ button:hover {
   );
 }
 button:active {
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
 .display {
+  overflow: hidden;
   height: 110px;
   background-color: rgb(44, 44, 44);
   color: rgb(189, 188, 188);
-  padding: 10px;
-  font-size: 2rem;
+  padding: 5px 10px 5px 10px;
   font-family: var(--ff-display);
-  text-align: right;
   grid-column: 1 / span 4;
 }
 .current-display {
+  /* background-color: red; */
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 60%;
   color: white;
   font-size: 2.5rem;
 }
+.prev-display {
+  /* background-color: red; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-size: 2rem;
+
+  height: 40%;
+}
 .allClear {
   grid-column: 1 / span 2;
-}
-.equal {
-  grid-column: 3 / span 2;
 }
 .operator {
   font-size: 2.5rem;
