@@ -48,7 +48,7 @@ button {
   font-size: 2rem;
   background: linear-gradient(
     to right top,
-    rgb(147, 216, 199),
+    rgb(124, 187, 171),
     rgb(35, 139, 113)
   );
   height: 100px;
@@ -94,8 +94,27 @@ button:active {
 
   height: 40%;
 }
+.number {
+  color: black;
+
+  background: linear-gradient(
+    to right top,
+    rgb(51, 190, 190),
+    rgb(29, 146, 146)
+  );
+  /* background-color: rgb(44, 44, 44); */
+}
 .allClear {
   grid-column: 1 / span 2;
+}
+.allClear,
+.delete,
+.equal {
+  background: linear-gradient(
+    to left top,
+    rgb(87, 230, 151),
+    rgb(67, 172, 114)
+  );
 }
 .operator {
   font-size: 2.5rem;
