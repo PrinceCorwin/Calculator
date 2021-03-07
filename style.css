@@ -1,10 +1,5 @@
 /* roots and customs */
 :root {
-  --clr-primary: ;
-  --clr-midtone: ;
-  --clr-darktone: ;
-  --clr-contrast1: ;
-  --clr-contrast2: ;
   --ff-buttons: "Righteous", monospace;
   --ff-display: "Roboto Mono", monospace;
 }
@@ -18,7 +13,6 @@
 }
 body {
   background-image: url(./images/school-hall.jpg);
-  /* background-color: black; */
   background-size: cover;
   padding: 40px;
 }
@@ -29,16 +23,12 @@ body {
 }
 .calc-container {
   position: relative;
-  /* border: 4px solid green; */
   width: 400px;
-  /* margin-top: 40px; */
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(4, 100px);
-  /* grid-gap: 1px; */
-  /* box-shadow: 5px -5px 30px rgb(203, 243, 203); */
-  box-shadow: 0 0 30px rgb(203, 243, 203);
+  /* box-shadow: 0 0 30px rgb(203, 243, 203); */
 }
 
 button {
@@ -67,6 +57,8 @@ button:active {
   transform: scale(0.9);
 }
 .display {
+  border: 2px solid rgb(29, 146, 146);
+
   overflow: hidden;
   height: 110px;
   background-color: rgb(44, 44, 44);
@@ -76,8 +68,6 @@ button:active {
   grid-column: 1 / span 4;
 }
 .current-display {
-  /* background-color: red; */
-
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -86,7 +76,6 @@ button:active {
   font-size: 2.5rem;
 }
 .prev-display {
-  /* background-color: red; */
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -102,7 +91,6 @@ button:active {
     rgb(51, 190, 190),
     rgb(29, 146, 146)
   );
-  /* background-color: rgb(44, 44, 44); */
 }
 .allClear {
   grid-column: 1 / span 2;
@@ -127,4 +115,27 @@ button:active {
   left: 0;
   /* transform: rotate(-90deg); */
   /* text-align: right; */
+}
+@media screen and (max-width: 450px) {
+  .calc-container {
+    width: 100vw;
+    grid-template-columns: repeat(4, 25%);
+  }
+  .display {
+    border: 2px solid rgb(29, 146, 146);
+  }
+  body {
+    padding: 0;
+    background-image: none;
+    background-color: black;
+  }
+}
+@media screen and (max-width: 350px) {
+  .calc-container {
+    width: 320px;
+    /* grid-template-columns: repeat(auto-fill, minmax(25%, 1fr)); */
+  }
+  button {
+    height: 80px;
+  }
 }
