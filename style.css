@@ -124,6 +124,13 @@ button:active {
   .display {
     border: 2px solid rgb(29, 146, 146);
   }
+  .current-display {
+    font-size: 2rem;
+  }
+  .prev-display {
+    font-size: 1.5rem;
+  }
+
   body {
     padding: 0;
     background-image: none;
