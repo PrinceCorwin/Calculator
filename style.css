@@ -108,8 +108,7 @@ button:active {
   grid-column: 1 / span 2;
 }
 .allClear,
-.delete,
-.equal {
+.delete {
   background: linear-gradient(
     to left top,
     rgb(87, 230, 151),

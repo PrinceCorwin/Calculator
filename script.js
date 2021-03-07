@@ -12,9 +12,9 @@ const numbersClick = document.querySelectorAll(".number");
 const operatorsClick = document.querySelectorAll(".operator");
 
 const allClearClick = document.querySelector(".allClear");
-allClearClick.ontouchstart = function () {
-  clear();
-};
+// allClearClick.ontouchstart = function () {
+//   clear();
+// };
 allClearClick.onclick = function () {
   clear();
 };
@@ -23,41 +23,42 @@ equalClick.onclick = function () {
   equal = true;
   compute();
 };
-equalClick.ontouchstart = function () {
-  compute();
-};
+// equalClick.ontouchstart = function () {
+//   equal = true;
+//   compute();
+// };
 const deleteClick = document.querySelector(".delete");
 deleteClick.onclick = function () {
   deleteDigit();
 };
-deleteClick.ontouchstart = function () {
-  deleteDigit();
-};
+// deleteClick.ontouchstart = function () {
+//   deleteDigit();
+// };
 const signClick = document.querySelector(".changeSign");
 signClick.onclick = function () {
   changeSign();
 };
-signClick.ontouchstart = function () {
-  changeSign();
-};
+// signClick.ontouchstart = function () {
+//   changeSign();
+// };
 
 for (let i = 0; i < numbersClick.length; i++) {
   numbersClick[i].addEventListener("click", function () {
     appendNumber(numbersClick[i].innerText);
   });
-  numbersClick[i].addEventListener("ontouchstart", function () {
-    appendNumber(numbersClick[i].innerText);
-  });
+  //   numbersClick[i].addEventListener("ontouchstart", function () {
+  //     appendNumber(numbersClick[i].innerText);
+  //   });
 }
 for (let i = 0; i < operatorsClick.length; i++) {
   operatorsClick[i].addEventListener("click", function () {
     operator = operatorsClick[i].innerText;
     setOperator();
   });
-  operatorsClick[i].addEventListener("ontouchstart", function () {
-    operator = operatorsClick[i].innerText;
-    setOperator();
-  });
+  //   operatorsClick[i].addEventListener("ontouchstart", function () {
+  //     operator = operatorsClick[i].innerText;
+  //     setOperator();
+  //   });
 }
 
 // functions
