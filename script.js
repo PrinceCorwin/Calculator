@@ -172,6 +172,7 @@ function updateDisplay() {
   if (currentNumber.toString().includes(".")) {
     let integer = currentNumber.toString().split(".")[0];
     let decimal = currentNumber.toString().split(".")[1];
+    // need to add if statement to remove zeros from decimal if there are no other numbers
     console.log(decimal);
     if (integer === "") {
       currentDisplay.innerText = "0" + "." + decimal;
