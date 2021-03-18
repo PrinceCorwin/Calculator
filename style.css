@@ -14,17 +14,41 @@
 body {
   background-image: url(./images/school-hall.jpg);
   background-size: cover;
-  padding: 40px;
+  /* padding-top: 40px; */
 }
 main {
-  margin-bottom: 30px;
+  min-height: 100vh;
+  /* margin-bottom: 30px; */
 }
 .flex-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.app-title {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: red; */
+  font-family: var(--ff-buttons);
+  font-size: 2rem;
+  color: white;
+  padding: 2rem;
+}
+.app-title img {
+  /* padding: 3px; */
+  border: 5px solid transparent;
+  transform: translateY(4px);
+  height: 100%;
+  /* border-radius: 50%; */
+}
 .calc-container {
+  padding-top: 2rem;
   position: relative;
   width: 400px;
   display: grid;
@@ -120,6 +144,7 @@ button:active {
   /* text-align: right; */
 }
 .social-links {
+  font-family: var(--ff-buttons);
   /* background-color: white; */
   width: 50px;
   height: 50%;
@@ -129,7 +154,14 @@ button:active {
   align-items: flex-start;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10px;
+}
+#home {
+  color: #dcdcdc;
+
+  align-self: flex-end;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 /* fab is FA icon class */
 .fab {
@@ -138,21 +170,77 @@ button:active {
   transition: 0.3s;
 }
 
-.fab:hover {
+.fab:hover,
+#home:hover {
   color: rgb(29, 146, 146);
 }
-@media screen and (max-width: 800px) {
-  .social-links {
-    position: relative;
+/* footer starts */
 
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #dcdcdc;
+  background-color: black;
+}
+footer > div {
+  padding: 1rem;
+}
+.footer-contact {
+  font-family: var(--ff-buttons);
+  color: #dcdcdc;
+}
+.footer-contact-links {
+  display: flex;
+  flex-direction: column;
+}
+footer a,
+footer .fab,
+footer .fas,
+footer img {
+  /* text-decoration: none; */
+  color: lightblue;
+  transition: all 0.2s ease-in-out;
+}
+footer a:hover,
+footer .fab:hover,
+footer .fas:hover,
+footer img:hover {
+  transform: scale(1.1);
+  color: yellow;
+}
+.footer-logo {
+  width: 200px;
+}
+.footer-social {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.copyright {
+  padding: 0.5rem 0;
 }
 
+@media screen and (max-width: 1100px) {
+  .app-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-contact {
+    text-align: center;
+  }
+  .social-links {
+    display: none;
+  }
+}
 @media screen and (max-width: 450px) {
   .calc-container {
     width: 100vw;
