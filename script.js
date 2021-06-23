@@ -149,11 +149,13 @@ function setOperator() {
 
 function updateDisplay() {
   //split currentNumber into two parts... before and after decimal
+  console.log("currentNumber: " + currentNumber);
+
   if (currentNumber.toString().includes(".")) {
     let integer = currentNumber.toString().split(".")[0];
     let decimal = currentNumber.toString().split(".")[1];
     // need to add if statement to remove zeros from decimal if there are no other numbers
-    console.log(decimal);
+    // console.log(decimal);
     if (integer === "") {
       currentDisplay.innerText = "0" + "." + decimal;
     } else {
@@ -176,6 +178,9 @@ function updateDisplay() {
   if (prevNumber != "") {
     prevDisplay.innerText = Number(prevNumber).toFixed(4).toLocaleString("en");
   }
-  console.log(currentNumber);
+  if (isNaN(currentNumber) || !isFinite(currentNumber)) {
+    currentDisplay.innerText = "error";
+  }
+  // console.log(currentNumber);
   //   return;
 }
